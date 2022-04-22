@@ -5,7 +5,7 @@ export default function App(){
   const [valorTela, setValorTela] = useState('')
   const [resultado, setResultado] = useState(0)
   const [acumulador, setAcumulador] = useState(0)
-  const [operacao, setOperacao] = useState(false)
+  const [operado, setOperado] = useState(false)
 
   //COMPONENTES
   const Tela=(valor,res)=>{
@@ -24,8 +24,28 @@ export default function App(){
   }
 
   //FUNÇÕES
-  
+  const addDigitoTela=(d)=>{
+    if((d==='+' || d=='-' || d=='*' || d== '/') && operado){
+      setOperado(false)
+      setValorTela(resultado+d)
+      return
+    }
+    if(operado){
+      setValorTela(d)
+      setOperado(false)
+      return
+    }
+    const valorDigitadoTela=valorTela+d
+    setValorTela(valorDigitadoTela)
+    }
+  }
 
+  const limparMemoria=()=>{
+    setOperado(false)
+    setValorTela('')
+    setResultado(0)
+    setAcumulador(0)
+  }
 
   //ESTILOS
   const cssTela={
