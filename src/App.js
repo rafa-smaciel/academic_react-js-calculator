@@ -28,6 +28,17 @@ export default function App(){
     window: 260,
   }
   
+  const cssTelaOper={
+    fontSize: 25,
+    color: '#fff',  
+    height: 20,
+  }
+
+  const cssTelarRes={
+    fontSize: 50,
+    color: '#fff',  
+  }
+  
     return (
       <>
       </>
