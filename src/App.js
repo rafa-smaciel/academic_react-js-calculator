@@ -7,16 +7,27 @@ export default function App(){
   const [acumulador, setAcumulador] = useState(0)
   const [operacao, setOperacao] = useState(false)
 
+  //COMPONENTES
   const Tela=(valor,res)=>{
     return(
-      <div style="">
-        <span style={}>{valor}</span>
-        <span style={}>{res}</span>
+      <div style={cssTela}>
+        <span style={cssTelaOper}>{valor}</span>
+        <span style={cssTelaRes}>{res}</span>
       </div>
     )
   }
 
-  //Estilos
+  const Btn=(label,onClick)=>{
+    return(
+      <button style={cssBtn} onClick={onClick}>{label}</button>
+    )
+  }
+
+  //FUNÇÕES
+  
+
+
+  //ESTILOS
   const cssTela={
     display: 'flex',
     paddingLeft: 20,
@@ -34,9 +45,21 @@ export default function App(){
     height: 20,
   }
 
-  const cssTelarRes={
+  const cssTelaRes={
     fontSize: 50,
     color: '#fff',  
+  }
+
+  const cssBtn={
+    fontSize: 30,
+    height: 75,
+    with: 75,
+    padding: 20,
+    backgroundColor: '#000',
+    color: '#fff',
+    borderColor: '#000',
+    textAlign: 'center',
+    outline: 'none',
   }
   
     return (
