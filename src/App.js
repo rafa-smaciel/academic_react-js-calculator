@@ -70,7 +70,7 @@ export default function App(){
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
-    with: 300,
+    width: 300,
     border: '1px solid #000'
   }
 
@@ -104,7 +104,7 @@ export default function App(){
   const cssBtn={
     fontSize: 30,
     height: 75,
-    with: 75,
+    width: 75,
     padding: 20,
     backgroundColor: '#000',
     color: '#fff',
@@ -119,7 +119,7 @@ export default function App(){
         <h3>Calculadora Matemática Simples</h3>
         {Tela(valorTela,resultado)}
         <div style={cssBotoes}>
-          {Btn('AC',()=>limparMemoria)}
+          {Btn('AC',limparMemoria)}
           {Btn('(',()=>addDigitoTela('('))}
           {Btn(')',()=>addDigitoTela(')'))}
           {Btn('/',()=>addDigitoTela('/'))}
