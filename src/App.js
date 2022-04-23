@@ -45,6 +45,17 @@ export default function App(){
     setValorTela('')
     setResultado(0)
     setAcumulador(0)
+    return
+  }
+
+  const Operacao=(oper)=>{
+    if(oper=='bs'){
+      let vtela=valorTela
+      vtela=vtela.substring(0,(vtela.length-1))
+      setValorTela(vtela)
+      setOperado(false)
+      return
+    }
   }
 
   //ESTILOS
@@ -81,9 +92,8 @@ export default function App(){
     textAlign: 'center',
     outline: 'none',
   }
-  
+}
     return (
       <>
       </>
     );
-}
