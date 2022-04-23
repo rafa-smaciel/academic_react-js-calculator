@@ -56,9 +56,19 @@ export default function App(){
       setOperado(false)
       return
     }
+    try{
+      const r=eval(valorTela)
+      setAcumulador(r)
+      setResultado(r)
+      setOperado(true)
+    }catch{
+      setResultado('ERRO')
+    }
   }
 
   //ESTILOS
+  
+
   const cssTela={
     display: 'flex',
     paddingLeft: 20,
