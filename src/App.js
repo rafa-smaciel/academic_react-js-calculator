@@ -67,7 +67,19 @@ export default function App(){
   }
 
   //ESTILOS
-  
+  const cssContainer={
+    display:'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flexDirection: 'column',
+    with: 300,
+    border: '1px solid #000'
+  }
+
+  const cssBotoes={
+    flexDirection: 'row',
+    flexWrapper: 'wrap'
+  }
 
   const cssTela={
     display: 'flex',
@@ -77,18 +89,18 @@ export default function App(){
     alignItems: 'felx-start',
     backgroundColor: '#444',
     flexDirection: 'column',
-    window: 260,
+    window: 260
   }
   
   const cssTelaOper={
     fontSize: 25,
     color: '#fff',  
-    height: 20,
+    height: 20
   }
 
   const cssTelaRes={
     fontSize: 50,
-    color: '#fff',  
+    color: '#fff'
   }
 
   const cssBtn={
@@ -100,10 +112,12 @@ export default function App(){
     color: '#fff',
     borderColor: '#000',
     textAlign: 'center',
-    outline: 'none',
+    outline: 'none'
   }
-}
+
     return (
       <>
+        <div style={cssContainer}>
       </>
     );
+}
