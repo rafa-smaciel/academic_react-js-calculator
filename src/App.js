@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useState} from 'react'
 
 export default function App(){
@@ -25,7 +26,7 @@ export default function App(){
 
   //FUNÇÕES
   const addDigitoTela=(d)=>{
-    if((d==='+' || d=='-' || d=='*' || d== '/') && operado){
+    if((d==='+' || d==='-' || d==='*' || d=== '/') && operado){
       setOperado(false)
       setValorTela(resultado+d)
       return
@@ -47,7 +48,7 @@ export default function App(){
     }
 
     const Operacao=(oper)=>{
-      if(oper=='bs'){
+      if(oper==='bs'){
         let vtela=valorTela
         vtela=vtela.substring(0,(vtela.length-1))
         setValorTela(vtela)
@@ -55,6 +56,7 @@ export default function App(){
         return
       }
       try{
+        // eslint-disable-next-line no-eval
         const r=eval(valorTela)
         setAcumulador(r)
         setResultado(r)
